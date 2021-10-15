@@ -1,0 +1,80 @@
+---
+title: "Cleaning Cardisoma Palatability Data"
+author: "Camila Vargas"
+date: "10/15/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(here)
+library(data.table)
+library(tidyverse)
+library(readxl)
+library(janitor)
+library(lubridate)
+
+## Sets R not to use scientific notations
+options(scipen=999) 
+```
+
+
+## Read data
+```{r}
+excel_sheets("raw_data/Cardisoma Palatability.xlsx")
+
+
+master_raw <- read_excel("raw_data/Cardisoma Palatability.xlsx", sheet = "Master") %>% 
+  clean_names()
+
+trials_25w <- read_excel("raw_data/Cardisoma Palatability.xlsx", sheet = "25w Trials") %>% clean_names()
+
+trials_d50 <- read_excel("raw_data/Cardisoma Palatability.xlsx", sheet = "D50 Trials") %>% clean_names()
+
+##Compare with 25s trials
+sheet3 <- read_excel("raw_data/Cardisoma Palatability.xlsx", sheet = "Sheet3") %>% clean_names()
+
+```
+
+**Note**
+Not including sheet 5 and sheet 6, as it seems to me that is summary data.
+
+Sheet 3?? Has bait information for D50 and 25w. Is this all data in 25w Trails and D50 Trails?
+How does it connect with the master data?
+
+
+## Cleaning
+```{r}
+
+master_clean <- master_raw %>% 
+  select(1:9) %>% 
+  mutate(start_time = as_hms(tx_start),
+         end_time = as_hms(tx_end)) %>% 
+  select(-tx_start, -tx_end) %>% 
+  rename(crab_bucket_weight = c_b_wt_g)
+
+#start_time = format(tx_start, format = "%H:%M:%S"
+
+```
+
+Unit of weight = Grams
+
+```{r}
+## checking
+
+crab_count <- master_clean %>% 
+  group_by(food) %>% 
+  tally()
+# matches summary table in xlsx
+
+str(master_clean)
+
+```
+
+## Save data
+```{r}
+write_csv(master_clean, here::here("clean_data/2010_palmyra_atoll_cardisoma_palatability.csv"))
+
+```
+
