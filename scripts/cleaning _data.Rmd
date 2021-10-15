@@ -56,6 +56,9 @@ master_clean <- master_raw %>%
 
 #start_time = format(tx_start, format = "%H:%M:%S"
 
+sheet3_clean <- sheet3 %>% 
+  select(1:5)
+
 ```
 
 Unit of weight = Grams
@@ -72,9 +75,45 @@ str(master_clean)
 
 ```
 
+## Tails data
+```{r}
+trials_25w_clean <- trials_25w %>% 
+  select(1:5)
+
+sheet3_25w <- sheet3 %>% 
+  select(1:5) %>% 
+  filter(bait == "25W")
+
+identical(trials_25w_clean,sheet3_25w)
+all_equal(trials_25w_clean,sheet3_25w) ## identical data
+
+trials_d50_clean <- trials_d50 %>% 
+  select(1:5)
+
+sheet3_d50 <- sheet3 %>% 
+  select(1:5) %>% 
+  filter(bait == "D50")
+
+all_equal(sheet3_d50, trials_d50_clean)
+
+```
+
+Sheet 3 has data for both trials! 
+
+## Matching bait infomramtion with master data
+
+```{r}
+ cardisome_complete <- master_clean %>% 
+  left_join(sheet3_clean, by = c("crab", "food", "percent_remaining")) %>% 
+  select(date, crab, crab_bucket_weight, crab_wt, bucket_wt, start_time, end_time, food, bait, percent_remaining, percent_consumed)
+
+
+```
+
+
 ## Save data
 ```{r}
-write_csv(master_clean, here::here("clean_data/2010_palmyra_atoll_cardisoma_palatability.csv"))
+write_csv(cardisome_complete, here::here("clean_data/2010_palmyra_atoll_cardisoma_palatability.csv"))
 
 ```
 

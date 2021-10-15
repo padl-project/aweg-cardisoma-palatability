@@ -1,0 +1,12 @@
+attributeName	attributeDefinition	class	unit	dateTimeFormatString	missingValueCode	missingValueCodeExplanation
+date		Date		!Add datetime specifier here!		
+crab		numeric	!Add units here!			
+crab_bucket_weight		numeric	!Add units here!			
+crab_wt		numeric	!Add units here!			
+bucket_wt		numeric	!Add units here!			
+start_time		Date		!Add datetime specifier here!		
+end_time		Date		!Add datetime specifier here!		
+food		categorical				
+bait		categorical				
+percent_remaining		numeric	!Add units here!			
+percent_consumed		numeric	!Add units here!			

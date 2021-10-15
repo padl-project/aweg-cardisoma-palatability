@@ -1,0 +1,8 @@
+attributeName	code	definition
+bait	25W	
+bait	D50	
+food	25W	
+food	Coconut	
+food	D50	
+food	Meristem	
+food	Pandanus	

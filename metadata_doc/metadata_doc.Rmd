@@ -1,7 +1,7 @@
 ---
-title: "ADD TILE"
-author: "ADD AUTHOR"
-date: "ADD DATE"
+title: "Cardisoma Palatability data"
+author: "Alex Wegmann"
+date: "10/15/2021"
 output: word_document
 ---
 
@@ -22,13 +22,13 @@ The information in this document will be used to create the EML of the data pack
 
 ## 1. Data Package Title
 
-Palmyra Atoll Weather Tables and Monthly Rainfall 2008-2017
+2010 Palmyra Atoll Cardisoma Palatability
 
 
 ## 2. Dataset Title
 <!--_Include what, where, and when in the dataset title_-->
- - 
- - 
+ 
+ - 2010_palmyra_atoll_cardisome_palatability.csv
  
 
 ## 3. Abstract
@@ -36,7 +36,7 @@ _Please provide an abstract specifically of the dataset. This is different from 
 
 [See example here](https://docs.google.com/document/d/1KdHJObHl5Bxxr9t0LISTwX0cCSVvx7NPUjz5T_P9JEc/edit#)
 
-Weather data collected from Palmyra Atoll by US Fish and Wildlife Service and the Nature Conservancy for the period of 2010-2016, with rainfall data available from 2008-2017. 
+[FILL IN ABSTRACT] 
 
 
 ## 4. Creators
@@ -46,11 +46,11 @@ _These are the people who will show up as authors in the dataset citation. These
 
 ```{r, creator table, echo = FALSE, message= FALSE, warning= FALSE}
 
-first_name <- c(" ", " ")
+first_name <- c("Alex", " ")
 middle_in <- c("", "")
-last_name <- c(" ", " ")
-organization <- c(" ", " ")
-email <- c(" ", " ")
+last_name <- c("Wegmann", " ")
+organization <- c("The Nature Conservancy", " ")
+email <- c("alex.wegmann@tnc.org", " ")
 orcid <- c("", "")
 
 creator_colname <- c("First Name", "Middle Initial", "Last Name", "Organization", "email address", "ORCID ID")
@@ -87,13 +87,13 @@ _You may also list other personnel who participated in the project (such as fiel
 
 ```{r, personnel table, echo = FALSE, message= FALSE, warning= FALSE}
 
-p_first_name <- c(" ", "Camila")
-p_middle_in <- c("", "", "")
-p_last_name <- c(" ", "Vargas Poulsen", " ")
-p_organization <- c(" ", "PADL Data Manager, University of California Santa Barbara")
-p_email <- c(" ", "camilavargas@ucsb.edu", " ")
-p_orcid <- c("", "", " ")
-p_role <- c("contact", "associated party")
+p_first_name <- c("Alex", "Camila", " ")
+p_middle_in <- c(" ", " ", " ")
+p_last_name <- c("Wegmann", "Vargas Poulsen", " ")
+p_organization <- c("The Nature Conservancy", "PADL Data Manager, University of California Santa Barbara", " ")
+p_email <- c("alex.wegmann@tnc.org", "camilavargas@ucsb.edu", " ")
+p_orcid <- c(" ", " ", " ")
+p_role <- c("contact", "associated party", " ")
 
 personnel_colnames <- c("First Name", "Middle Initial", "Last Name", "Organization", "email address", "ORCID ID", "Role in project")
 
@@ -134,6 +134,8 @@ Attribution is required. CC licenses require that those who reuse a work provide
 ## 7. Keywords
 _Using keywords from a controlled vocabulary (CV) will improve your data's future discovery and reuse.  The LTER CV is a good source for keywords. Access the [LTER CV here](https://vocab.lternet.edu/vocab/vocab/index.php).  Also, please determine one or two keywords that best describe your lab, station, and/or project (e.g., Trout Lake Station, NTL LTER).). Add as many rows to this table as needed_
 
+- Palmyra Atoll
+- Crustaceans
 - 
 
 
@@ -179,7 +181,7 @@ flextable::flextable(funding_table) %>%
 
 Information <- c("Begin date", "End date", "Is data collection ongoing or completed?")
 
-Description <- c(" ", "", "Completed")
+Description <- c("2010-05-13 ", "2010-05-23", "Completed")
 
 timeframe_table <- tibble(Information, Description)
 
@@ -231,6 +233,7 @@ _Be specific about the study design and field and lab methods for collecting and
 
 Find an example [in this link](https://docs.google.com/document/d/1KdHJObHl5Bxxr9t0LISTwX0cCSVvx7NPUjz5T_P9JEc/edit#)
 
+[Fill in Methods]
 
 
 ## 12. Data Provenance
@@ -284,24 +287,24 @@ Each row in the below table describes one column in your data table.  Complete e
 
 # **UPDATE NAMES**
 
-path_data <- here::here("project.XX")
+path_data <- here::here("clean_data")
 path_templates <- here::here("data_attributes")
-file1_name <- "FILE NAME"
-file2_name <- "FILE NAME"
+file1_name <- "2010_palmyra_atoll_cardisoma_palatability"
+#file2_name <- "FILE NAME"
 
 
 ## Creating the attribute .txt
-EMLassemblyline::template_table_attributes(
-  path = path_templates,
-  data.path = path_data,
-  data.table = paste0(file2_name, ".csv"))
+# EMLassemblyline::template_table_attributes(
+#   path = path_templates,
+#   data.path = path_data,
+#   data.table = paste0(file1_name, ".csv"))
 
 ## reading text into a data frame
 data_attributes1 <- read.delim2(here::here(paste0("data_attributes/attributes_", file1_name, ".txt"))) %>% 
   mutate(unit = case_when(unit == "!Add units here!" ~ "*"))
 
-data_attributes2 <- read.delim2(here::here(paste0("data_attributes/attributes_", file2_name, ".txt"))) %>% 
-  mutate(unit = case_when(unit == "!Add units here!" ~ "*"))
+# data_attributes2 <- read.delim2(here::here(paste0("data_attributes/attributes_", file2_name, ".txt"))) %>% 
+#   mutate(unit = case_when(unit == "!Add units here!" ~ "*"))
 
 
 ```
@@ -318,8 +321,8 @@ flextable::flextable(data_attributes1) %>%
 
 ```{r, attribute table 2, echo=FALSE, message= FALSE, warning= FALSE}
 
-flextable::flextable(data_attributes2) %>% 
-  width(width = 1)
+# flextable::flextable(data_attributes2) %>% 
+#   width(width = 1)
 
 ```
 
@@ -332,13 +335,13 @@ _If you use codes in your column, please define each code in the following table
 ```{r, attribute code, echo = FALSE, message= FALSE, warning= FALSE}
 
 ## Note: there can only be one file with he prefix attribute_ in the data attribute folder.
-EMLassemblyline::template_categorical_variables(
-  path = path_templates,
-  data.path = path_data)
+# EMLassemblyline::template_categorical_variables(
+#   path = path_templates,
+#   data.path = path_data)
 
 # **UPDATE NAMES**
 
-cat_vars <- read.delim2(here::here("data_attributes/catvars_FILE NAME.txt"))
+cat_vars <- read.delim2(here::here(paste0("data_attributes/catvars_",file1_name, ".txt")))
 
 ```
 
