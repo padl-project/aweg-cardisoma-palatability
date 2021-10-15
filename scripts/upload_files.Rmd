@@ -40,7 +40,7 @@ Metadata Doc
 
 drive_upload(media = here::here("metadata_doc/metadata_doc.docx"),
              path = as_id(final_files_url),
-             name = ".docx",
+             name = "wegmann_cardisoma_pal_metadata.docx",
              type = "docx")
 ```
 
