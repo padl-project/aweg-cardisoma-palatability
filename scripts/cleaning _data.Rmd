@@ -4,6 +4,9 @@ author: "Camila Vargas"
 date: "10/15/2021"
 output: html_document
 ---
+This scripts cleans, organize and QA/QC Alex Wegmann data on Cardisoma Palatability.
+
+The outcome data of this script will be publicly available in the Environmental Data Initiative data portal.
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -94,7 +97,7 @@ sheet3_d50 <- sheet3 %>%
   select(1:5) %>% 
   filter(bait == "D50")
 
-all_equal(sheet3_d50, trials_d50_clean)
+all_equal(sheet3_d50, trials_d50_clean) ## both data matches
 
 ```
 
@@ -110,6 +113,8 @@ Sheet 3 has data for both trials!
 
 ```
 
+Clean and complete data comes from Mater sheet in combination with data on sheet 3.
+Master sheet has all crab identification, food and remaining percentage. Sheet 3 contains information about the bait.
 
 ## Save data
 ```{r}
