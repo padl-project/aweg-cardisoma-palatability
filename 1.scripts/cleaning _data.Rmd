@@ -17,6 +17,7 @@ library(tidyverse)
 library(readxl)
 library(janitor)
 library(lubridate)
+library(hms)
 
 ## Sets R not to use scientific notations
 options(scipen=999) 
@@ -25,18 +26,18 @@ options(scipen=999)
 
 ## Read data
 ```{r}
-excel_sheets("raw_data/Cardisoma Palatability.xlsx")
+excel_sheets("6.raw_data/Cardisoma Palatability.xlsx")
 
 
-master_raw <- read_excel("raw_data/Cardisoma Palatability.xlsx", sheet = "Master") %>% 
+master_raw <- read_excel("6.raw_data/Cardisoma Palatability.xlsx", sheet = "Master") %>% 
   clean_names()
 
-trials_25w <- read_excel("raw_data/Cardisoma Palatability.xlsx", sheet = "25w Trials") %>% clean_names()
+trials_25w <- read_excel("6.raw_data/Cardisoma Palatability.xlsx", sheet = "25w Trials") %>% clean_names()
 
-trials_d50 <- read_excel("raw_data/Cardisoma Palatability.xlsx", sheet = "D50 Trials") %>% clean_names()
+trials_d50 <- read_excel("6.raw_data/Cardisoma Palatability.xlsx", sheet = "D50 Trials") %>% clean_names()
 
 ##Compare with 25s trials
-sheet3 <- read_excel("raw_data/Cardisoma Palatability.xlsx", sheet = "Sheet3") %>% clean_names()
+sheet3 <- read_excel("6.raw_data/Cardisoma Palatability.xlsx", sheet = "Sheet3") %>% clean_names()
 
 ```
 
@@ -107,9 +108,19 @@ Sheet 3 has data for both trials!
 
 ```{r}
  cardisome_complete <- master_clean %>% 
-  left_join(sheet3_clean, by = c("crab", "food", "percent_remaining")) %>% 
+  left_join(sheet3_clean, 
+            by = c("crab", "food", "percent_remaining")) %>%
+  mutate(date = date(date)) %>% 
   select(date, crab, crab_bucket_weight, crab_wt, bucket_wt, start_time, end_time, food, bait, percent_remaining, percent_consumed)
 
+
+## Check
+check <- cardisome_complete %>% 
+  select(percent_remaining, percent_consumed) %>% 
+  mutate(together = percent_remaining + percent_consumed) %>% 
+  filter(together > 1)
+
+range(cardisome_complete$date)
 
 ```
 
@@ -118,7 +129,7 @@ Master sheet has all crab identification, food and remaining percentage. Sheet 3
 
 ## Save data
 ```{r}
-write_csv(cardisome_complete, here::here("clean_data/2010_palmyra_atoll_cardisoma_palatability.csv"))
+write_csv(cardisome_complete, here::here("7.clean_data/palmyra_atoll_cardisoma_palatability_2010.csv"))
 
 ```
 
