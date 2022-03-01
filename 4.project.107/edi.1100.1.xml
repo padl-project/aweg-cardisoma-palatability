@@ -1,0 +1,361 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eml:eml xmlns:eml="https://eml.ecoinformatics.org/eml-2.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:stmml="http://www.xml-cml.org/schema/stmml-1.2" packageId="edi.1100.1" xsi:schemaLocation="https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd https://eml.ecoinformatics.org/eml-2.2.0/eml.xsd" system="edi">
+  <access authSystem="https://pasta.edirepository.org/authentication" order="allowFirst" scope="document">
+    <allow>
+      <principal>uid=palmyra_project,o=EDI,dc=edirepository,dc=org</principal>
+      <permission>all</permission>
+    </allow>
+    <allow>
+      <principal>public</principal>
+      <permission>read</permission>
+    </allow>
+  </access>
+  <dataset>
+    <title>PALATABILITY OF TWO RODENTICIDE PRODUCTS: FIELD-BASED ASSESSMENT AT PALMYRA ATOLL</title>
+    <creator>
+      <individualName>
+        <givenName>Alex</givenName>
+        <surName>Wegmann</surName>
+      </individualName>
+      <organizationName>The Nature Conservancy</organizationName>
+      <electronicMailAddress>alex.wegmann@tnc.org</electronicMailAddress>
+    </creator>
+    <creator>
+      <individualName>
+        <givenName>Aurora</givenName>
+        <surName>Alifano</surName>
+      </individualName>
+      <organizationName>Island Conservation</organizationName>
+    </creator>
+    <associatedParty>
+      <individualName>
+        <givenName>Camila</givenName>
+        <surName>Vargas Poulsen</surName>
+      </individualName>
+      <organizationName>PADL Data Manager, Univerity of California Santa Barbara</organizationName>
+      <electronicMailAddress>camilavargas@ucsb.edu</electronicMailAddress>
+      <role>PADL Data Manager</role>
+    </associatedParty>
+    <pubDate>2022-03-01</pubDate>
+    <abstract>
+      <para>
+    This dataset describes the palatability, for the land crab
+    <emphasis>Cardisoma carnifex</emphasis>, of two rodenticide bait
+    products available for conservation use in the U.S.: “25W”
+    containing 25 ppm brodifacoum as the active ingredient, and “D50”
+    containing 50 ppm diphacinone as the active ingredient. Both
+    rodenticide bait products were found to be palatable to rats and
+    crabs when presented alongside three commonly available food items:
+    coconut endosperm (meat), the meristematic tissue of young coconut
+    palms, and the fleshy mesocarp of Pandanus fruit. 
+  </para>
+    </abstract>
+    <keywordSet>
+      <keyword>Palmyra Atoll</keyword>
+      <keyword>Rodenticide</keyword>
+      <keyword>Land crab</keyword>
+      <keyword>Palatability</keyword>
+      <keyword>Cardisoma</keyword>
+      <keywordThesaurus>none</keywordThesaurus>
+    </keywordSet>
+    <intellectualRights>
+      <para>This data package is released to the "public domain" under Creative Commons CC0 1.0 "No Rights Reserved" (see: https://creativecommons.org/publicdomain/zero/1.0/). It is considered professional etiquette to provide attribution of the original work if this data package is shared in whole or by individual components. A generic citation is provided for this data package on the website https://portal.edirepository.org (herein "website") in the summary metadata page. Communication (and collaboration) with the creators of this data package is recommended to prevent duplicate research or publication. This data package (and its components) is made available "as is" and with no warranty of accuracy or fitness for use. The creators of this data package and the website shall not be liable for any damages resulting from misinterpretation or misuse of the data package or its components. Periodic updates of this data package may be available from the website. Thank you.
+</para>
+    </intellectualRights>
+    <coverage>
+      <geographicCoverage>
+        <geographicDescription>Palmyra Atoll</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-162.083</westBoundingCoordinate>
+          <eastBoundingCoordinate>-162.043</eastBoundingCoordinate>
+          <northBoundingCoordinate>5.88333</northBoundingCoordinate>
+          <southBoundingCoordinate>5.871</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+      <temporalCoverage>
+        <rangeOfDates>
+          <beginDate>
+            <calendarDate>2010-05-13</calendarDate>
+          </beginDate>
+          <endDate>
+            <calendarDate>2010-05-23</calendarDate>
+          </endDate>
+        </rangeOfDates>
+      </temporalCoverage>
+    </coverage>
+    <maintenance>
+      <description>completed</description>
+    </maintenance>
+    <contact>
+      <individualName>
+        <givenName>Alex</givenName>
+        <surName>Wegmann</surName>
+      </individualName>
+      <organizationName>The Nature Conservancy</organizationName>
+      <electronicMailAddress>alex.wegmann@tnc.org</electronicMailAddress>
+    </contact>
+    <methods>
+      <methodStep>
+        <description>
+          <para>
+    Thirty-two C. carnifex were collected for bait palatability trials.
+    Crabs were collected at various locations on Cooper Island.
+    Individual crab weight and sex was recorded prior to each trial.
+    Crab weight ranged from 150 g to 550 g with a mean of 332 g (SD 82).
+    C. carnifex were presented with 4 food options for 4 hours, after
+    which the percent remaining was determined for each item. Each crab
+    was housed in a separate 5-gallon bucket. Four food items (coconut,
+    coconut meristem, Pandanus, and a bait product: 25W or D50) were cut
+    into pieces weighing 1g ± 0.5g (measured on an Escali™ 50-gram
+    electronic balance). These items were placed simultaneously into the
+    bucket and in front of the crab. A lid with holes for ventilation
+    was placed on the bucket to prevent the crab from escaping. After
+    the 4-hour study, crabs were removed, marked with a permanent marker
+    to prevent recapture, and released on Cooper Island. All remaining
+    food items were weighed immediately after the trial, and the mass
+    was recorded for each item.
+  </para>
+        </description>
+      </methodStep>
+    </methods>
+    <dataTable>
+      <entityName>Palatability of two rodenticide products for Cardisoma carnifex</entityName>
+      <entityDescription>palatability, for the land crab Cardisoma carnifex, of two rodenticide bait products: 25W and D50</entityDescription>
+      <physical>
+        <objectName>palmyra_atoll_cardisoma_palatability_2010.csv</objectName>
+        <size unit="bytes">8535</size>
+        <authentication method="MD5">f760ff621353a7d3a5003154d972c143</authentication>
+        <dataFormat>
+          <textFormat>
+            <numHeaderLines>1</numHeaderLines>
+            <recordDelimiter>\n</recordDelimiter>
+            <attributeOrientation>column</attributeOrientation>
+            <simpleDelimited>
+              <fieldDelimiter>,</fieldDelimiter>
+              <quoteCharacter>"</quoteCharacter>
+            </simpleDelimited>
+          </textFormat>
+        </dataFormat>
+      </physical>
+      <attributeList>
+        <attribute>
+          <attributeName>date</attributeName>
+          <attributeDefinition>Date of trial</attributeDefinition>
+          <storageType>date</storageType>
+          <measurementScale>
+            <dateTime>
+              <formatString>YYYY-MM-DD</formatString>
+              <dateTimeDomain/>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>crab</attributeName>
+          <attributeDefinition>Identification of each crab</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>Unique Identifier</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>natural</numberType>
+                <bounds>
+                  <minimum exclusive="false">1</minimum>
+                  <maximum exclusive="false">34</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>crab_bucket_weight</attributeName>
+          <attributeDefinition>Weight of bucket with crab</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>grams</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>natural</numberType>
+                <bounds>
+                  <minimum exclusive="false">510</minimum>
+                  <maximum exclusive="false">910</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>crab_wt</attributeName>
+          <attributeDefinition>weight of crab</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>grams</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>natural</numberType>
+                <bounds>
+                  <minimum exclusive="false">150</minimum>
+                  <maximum exclusive="false">550</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>bucket_wt</attributeName>
+          <attributeDefinition>weight of bucket</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>grams</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>natural</numberType>
+                <bounds>
+                  <minimum exclusive="false">360</minimum>
+                  <maximum exclusive="false">360</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>start_time</attributeName>
+          <attributeDefinition>Time at the start of trial</attributeDefinition>
+          <storageType>date</storageType>
+          <measurementScale>
+            <dateTime>
+              <formatString>hh:mm:ss</formatString>
+              <dateTimeDomain/>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>end_time</attributeName>
+          <attributeDefinition>Time at the end of trial</attributeDefinition>
+          <storageType>date</storageType>
+          <measurementScale>
+            <dateTime>
+              <formatString>hh:mm:ss</formatString>
+              <dateTimeDomain/>
+            </dateTime>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>food</attributeName>
+          <attributeDefinition>Type of food</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>25W</code>
+                    <definition>Brodifacoum bait pellet (approx 2 g)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Coconut</code>
+                    <definition>Cocos nucifera solid endosperm from mature droup</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>D50</code>
+                    <definition>Diphacinone bait pellet (approx 1.5 g)</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Meristem</code>
+                    <definition>Meristematic tissue from Cocos nucifera seedlings</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>Pandanus</code>
+                    <definition>Mesocarp tissue from Pandanus tectorius fruit</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>bait</attributeName>
+          <attributeDefinition>Type of bait</attributeDefinition>
+          <storageType>string</storageType>
+          <measurementScale>
+            <nominal>
+              <nonNumericDomain>
+                <enumeratedDomain>
+                  <codeDefinition>
+                    <code>25W</code>
+                    <definition>Brodifacoum bait product</definition>
+                  </codeDefinition>
+                  <codeDefinition>
+                    <code>D50</code>
+                    <definition>Diphacinone bait product</definition>
+                  </codeDefinition>
+                </enumeratedDomain>
+              </nonNumericDomain>
+            </nominal>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>percent_remaining</attributeName>
+          <attributeDefinition>Percentage of food remaining after trial</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>percentage</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                  <maximum exclusive="false">1</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+        <attribute>
+          <attributeName>percent_consumed</attributeName>
+          <attributeDefinition>Percentage of food consumbed by crab after trial (1 - percentage_remaining)</attributeDefinition>
+          <storageType>float</storageType>
+          <measurementScale>
+            <ratio>
+              <unit>
+                <customUnit>percentage</customUnit>
+              </unit>
+              <numericDomain>
+                <numberType>real</numberType>
+                <bounds>
+                  <minimum exclusive="false">0</minimum>
+                  <maximum exclusive="false">1</maximum>
+                </bounds>
+              </numericDomain>
+            </ratio>
+          </measurementScale>
+        </attribute>
+      </attributeList>
+      <numberOfRecords>136</numberOfRecords>
+    </dataTable>
+  </dataset>
+  <additionalMetadata>
+    <metadata>
+      <unitList>
+        <unit id="Unique Identifier" name="Unique Identifier" parentSI="" unitType="">
+          <description/>
+        </unit>
+        <unit id="grams" name="grams" parentSI="" unitType="">
+          <description/>
+        </unit>
+        <unit id="percentage" name="percentage" parentSI="" unitType="">
+          <description/>
+        </unit>
+      </unitList>
+    </metadata>
+  </additionalMetadata>
+</eml:eml>
